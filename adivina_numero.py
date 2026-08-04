@@ -1,0 +1,36 @@
+# Importar la librería para generar un número aleatorio
+import random
+
+# Generar un número secreto entre 1 y 100
+numero_secreto = random.randint(1, 100)
+
+# Contador de intentos
+intentos = 0
+
+# Mensaje de bienvenida
+print("===================================")
+print("    BIENVENIDO AL JUEGO")
+print("     ADIVINA EL NÚMERO")
+print("===================================")
+
+# Repetir hasta que el jugador adivine
+while True:
+
+    # Pedir un número al usuario
+    numero = int(input("Ingrese un número entre 1 y 100: "))
+
+    # Aumentar el contador de intentos
+    intentos = intentos + 1
+
+    # Comparar el número ingresado con el número secreto
+    if numero < numero_secreto:
+        print("El número secreto es mayor.")
+
+    elif numero > numero_secreto:
+        print("El número secreto es menor.")
+
+    else:
+        print("¡Felicidades!")
+        print("Adivinaste el número secreto.")
+        print("Número de intentos:", intentos)
+        break
